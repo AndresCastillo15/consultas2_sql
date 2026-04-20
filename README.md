@@ -34,11 +34,9 @@
 
 3. Obtener todos los datos de los empleados que se apellidan 'Gomez'.
 
-`SELECT * FROM Empleado WHERE apellidos_empleado = 'Gomez';`
+`SELECT * FROM Empleado WHERE apellidos_empleado LIKE 'Gomez%';`
 
 ![consulta3](img/consulta3.jpg "consulta3")
-
-*no tengo empleados con apellido Gomez*
 
 4. Obtener todos los datos de los empleados que se apellidan "Diaz" y los que se apellidan "Rodriguez".  Usar OR o IN
 
@@ -54,7 +52,31 @@
 
 6. Obtener todos los datos de los empleados cuyo apellido empiece por 'P'
 
-`SELECT * FROM Empleado
-WHERE apellidos_empleado LIKE 'P%';`
+`SELECT * FROM Empleado WHERE apellidos_empleado LIKE 'P%';`
 
 ![consulta6](img/consulta6.jpg "consulta6")
+
+7. Obtener el presupuesto total de todos los departamentos.
+
+`SELECT SUM(presupuesto_departamento) AS total_presupuesto FROM Departamento;`
+
+![consulta7](img/consulta7.jpg "consulta7")
+
+8. Obtener el número de empleados de cada departamento.
+
+`SELECT id_departamento, COUNT(*) AS cantidad_empleados FROM Empleado GROUP BY id_departamento;`
+
+![consulta8](img/consulta8.jpg "consulta8")
+
+9. Obtener un listado completo de empleados, incluyendo por cada empleado los datos del empleado y de su departamento.
+
+`SELECT * FROM Empleado, Departamento WHERE Empleado.id_departamento = Departamento.id_departamento;`
+
+![consulta9](img/consulta9.jpg "consulta9")
+
+10. Obtener un listado completo de empleados, incluyendo el nombre y apellidos del empleado junto al nombre y presupuesto de su departamento.
+
+`SELECT nombre_empleado,apellidos_empleado,nombre_departamento, presupuesto_departamento FROM Empleado, Departamento WHERE Empleado.id_departamento = Departamento.id_departamento;`
+
+![consulta10](img/consulta10.jpg "consulta10")
+
