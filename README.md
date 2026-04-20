@@ -64,7 +64,7 @@
 
 8. Obtener el número de empleados de cada departamento.
 
-`SELECT id_departamento, COUNT(*) AS cantidad_empleados FROM Empleado GROUP BY id_departamento;`
+`SELECT id_departamento, COUNT(id_empleado) FROM Empleado GROUP BY id_departamento;`
 
 ![consulta8](img/consulta8.jpg "consulta8")
 
