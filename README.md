@@ -85,3 +85,12 @@
 `SELECT nombre_empleado, apellidos_empleado FROM Empleado, Departamento WHERE Empleado id_departamento = Departamento id_departamento AND presupuesto_departamento > 100000000;`
 
 ![consulta11](img/consulta11.jpg "consulta11")
+
+
+# Clausula INNER JOIN
+
+![Inner](img/tabla_innerjoin.png)
+
+## Sub Consultas
+
+![SubConsulta](img/subconsulta.png)
