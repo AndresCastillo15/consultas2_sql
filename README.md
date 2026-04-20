@@ -80,3 +80,8 @@
 
 ![consulta10](img/consulta10.jpg "consulta10")
 
+11. Obtener los nombres y apellidos de los empleados que trabajen en departamentos cuyo presupuesto sea mayor a 100000000
+
+`SELECT nombre_empleado, apellidos_empleado FROM Empleado, Departamento WHERE Empleado id_departamento = Departamento id_departamento AND presupuesto_departamento > 100000000;`
+
+![consulta11](img/consulta11.jpg "consulta11")
